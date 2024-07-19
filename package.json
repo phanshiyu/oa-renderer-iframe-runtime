@@ -1,0 +1,20 @@
+{
+  "name": "oa-renderer-iframe-runtime",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "dependencies": {
+    "@govtechsg/open-attestation": "^6.9.3",
+    "penpal": "^6.2.2"
+  }
+}

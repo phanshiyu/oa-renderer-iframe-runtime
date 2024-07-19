@@ -1,0 +1,109 @@
+<h1>Transcript</h1>
+<p>
+  <strong>Issued On:</strong> {{issuedOn}} {{#if issuedOn}}<button
+    onClick="parentApi.selectiveDisclosure('issuedOn')"
+  >
+    x</button
+  >{{/if}}
+</p>
+<p>
+  <strong>Admission Date:</strong> {{admissionDate}} {{#if
+  admissionDate}}<button
+    onClick="parentApi.selectiveDisclosure('admissionDate')"
+  >
+    x</button
+  >{{/if}}
+</p>
+<p>
+  <strong>Graduation Date:</strong> {{graduationDate}} {{#if
+  graduationDate}}<button
+    onClick="parentApi.selectiveDisclosure('graduationDate')"
+  >
+    x</button
+  >{{/if}}
+</p>
+
+<h2>Recipient</h2>
+<p>
+  <strong>Name:</strong> {{recipient.name}} {{#if recipient.name}}<button
+    onClick="parentApi.selectiveDisclosure('recipient.name')"
+  >
+    x</button
+  >{{/if}}
+</p>
+<p>
+  <strong>NRIC:</strong> {{recipient.nric}} {{#if recipient.nric}}<button
+    onClick="parentApi.selectiveDisclosure('recipient.nric')"
+  >
+    x</button
+  >{{/if}}
+</p>
+<p>
+  <strong>Course:</strong> {{recipient.course}} {{#if recipient.course}}<button
+    onClick="parentApi.selectiveDisclosure('recipient.course')"
+  >
+    x</button
+  >{{/if}}
+</p>
+
+<h2>Transcript</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Grade</th>
+      <th>Course Credit</th>
+      <th>Course Code</th>
+      <th>Examination Date</th>
+      <th>Semester</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each transcript}}
+    <tr>
+      <td>
+        {{this.name}} {{#if this.name}}<button
+          onClick="parentApi.selectiveDisclosure('transcript.{{@index}}.name')"
+        >
+          x</button
+        >{{/if}}
+      </td>
+      <td>
+        {{this.grade}} {{#if this.grade}}<button
+          onClick="parentApi.selectiveDisclosure('transcript.{{@index}}.grade')"
+        >
+          x</button
+        >{{/if}}
+      </td>
+      <td>
+        {{this.courseCredit}} {{#if this.courseCredit}}<button
+          onClick="parentApi.selectiveDisclosure('transcript.{{@index}}.courseCredit')"
+        >
+          x</button
+        >{{/if}}
+      </td>
+      <td>
+        {{this.courseCode}} {{#if this.courseCode}}<button
+          onClick="parentApi.selectiveDisclosure('transcript.{{@index}}.courseCode')"
+        >
+          x</button
+        >{{/if}}
+      </td>
+      <td>
+        {{this.examinationDate}} {{#if this.examinationDate}}<button
+          onClick="parentApi.selectiveDisclosure('transcript.{{@index}}.examinationDate')"
+        >
+          x</button
+        >{{/if}}
+      </td>
+      <td>
+        {{this.semester}} {{#if this.semester}}<button
+          onClick="parentApi.selectiveDisclosure('transcript.{{@index}}.semester')"
+        >
+          x</button
+        >{{/if}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
