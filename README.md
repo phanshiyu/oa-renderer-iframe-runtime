@@ -1,6 +1,6 @@
 ## What
 The idea is to shift the penpal logic out of each decentralised renderer and shift it instead to the host. 
-The host creates kinda a iframe "runtime" where it takes a html handlebar template and injects it into its environment there by giving it access to the methods in the "runtime".
+The host creates kinda an iframe "runtime" where it takes a html handlebar template and injects it into its environment there by giving it access to the methods in the "runtime".
 
 This will make it possible for template code to be extremely lean, while still possibly being able to preserve most of the functionalities of the decentralised renderer:
 ```
